@@ -1,0 +1,123 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x40FC5FBE03D86EC6",
+      "device": "xc7s25csga225-1",
+      "name": "FIFO",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "fifo_generator_0": ""
+    },
+    "ports": {
+      "din": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "wr_en": {
+        "direction": "I"
+      },
+      "rd_en": {
+        "direction": "I"
+      },
+      "clk": {
+        "direction": "I"
+      },
+      "dout": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "empty": {
+        "direction": "O"
+      },
+      "full": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "FIFO_fifo_generator_0_0",
+        "parameters": {
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Input_Depth": {
+            "value": "16384"
+          },
+          "Output_Data_Width": {
+            "value": "8"
+          },
+          "Reset_Pin": {
+            "value": "false"
+          },
+          "Use_Embedded_Registers": {
+            "value": "false"
+          }
+        }
+      }
+    },
+    "nets": {
+      "din_1": {
+        "ports": [
+          "din",
+          "fifo_generator_0/din"
+        ]
+      },
+      "wr_en_1": {
+        "ports": [
+          "wr_en",
+          "fifo_generator_0/wr_en"
+        ]
+      },
+      "rd_en_1": {
+        "ports": [
+          "rd_en",
+          "fifo_generator_0/rd_en"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "fifo_generator_0/clk"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "dout"
+        ]
+      },
+      "fifo_generator_0_empty": {
+        "ports": [
+          "fifo_generator_0/empty",
+          "empty"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "fifo_generator_0/full",
+          "full"
+        ]
+      }
+    }
+  }
+}
